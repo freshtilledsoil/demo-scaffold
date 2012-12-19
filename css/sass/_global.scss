@@ -2,3 +2,67 @@
 html, body { margin: 0; padding: 0; width: 100%; }
 body { @include body-font-styles; }
 .container { width: 100%; max-width: $max-width; margin: 0 auto; padding: 0; }
+
+.main-header {
+  background: $lightest url('../img/static-bg.png') top center repeat;
+  @include box-shadow(0 1px 2px 0 $gray10);
+  padding: 1em 0;
+  position: fixed;
+  top: 0;
+  @include transition(all 0.2s ease);
+  width: 100%;
+  z-index: 9999;
+
+  .container {
+    padding: 0 1em;
+    width: auto;
+  }
+
+  .logo {
+    color: #232323;
+    float: left;
+    font-size: 1.375em;
+    font-weight: bold;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.main-nav {
+  text-align: right;
+  margin: 0;
+
+  ul {
+    margin: 0;
+  }
+
+  li {
+    @include inline-block();
+    margin: 0;
+    vertical-align: middle;
+  }
+
+  a {
+    border: 1px solid transparent;
+    @include border-radius(1em);
+    color: #de7028;
+    display: block;
+    font-size: 0.875em;
+    height: 2em;
+    line-height: 2em;
+    padding: 0 2em;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px #e5e5e5;
+    text-transform: lowercase;
+    @include transition(all 0.4s ease);
+
+    &:hover {
+      border-color: #e5e5e5;
+      background-color: $white;
+      text-decoration: none;
+    }
+  }
+}

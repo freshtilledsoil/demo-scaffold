@@ -15,10 +15,12 @@ $white:             hsl(0, 0%, 100%);
 
 // accent colors
 $orange:            #de7028;
+$gray:              #e5e5e5;
+$light-gray:        #fefefe;
 
 // color scheme
 $primary:           $orange;
-$lightest:          $white;
+$lightest:          $light-gray;
 $darkest:           $gray80;
 
 // Modular Scale : 16 @ 1.618 and 23 @ 1.618
@@ -32,8 +34,8 @@ $modular-scale-down1: 0.875;  // 14px
 $modular-scale-down2: 0.625;  // 10px
 
 // Type Variables
-$base-font-family:    "Helvetica Neue", Helvetica, Arial, sans-serif;
-$heading-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-family:    "ff-meta-web-pro-1", "ff-meta-web-pro-2", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$heading-font-family: "ff-meta-web-pro-1", "ff-meta-web-pro-2", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $code-font-family:    Menlo, Monaco, "Courier New", monospace;
 $base-font-size:      #{$modular-scale-base}em;
 $base-line-height:    $modular-scale-up1;
@@ -42,7 +44,7 @@ $base-font-color:     $darkest;
 $heading-font-color:  $darkest;
 
 // Grid function variables (not yet in use)
-$max-width:           1000px;
+$max-width:           1180px;
 $column-width:        150px;
 $gutter-width:        20px;
 $maximum-columns:     6;
