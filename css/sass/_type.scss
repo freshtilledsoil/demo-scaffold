@@ -17,6 +17,10 @@ p {
   margin: 0 0 #{$vertical-measure}em 0;
 }
 
+p.lead {
+  font-size: #{$modular-scale-up1}em;
+}
+
 strong { font-weight: bold; }
 em { font-style: italic; }
 cite { font-style: normal; }
@@ -33,32 +37,26 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: #{$modular-scale-up4}em;
-  margin-bottom: #{$vertical-measure / $modular-scale-up4}em;
 }
 
 h2 {
   font-size: #{$modular-scale-up3}em;
-  margin-bottom: #{$vertical-measure / $modular-scale-up3}em;
 }
 
 h3 {
   font-size: #{$modular-scale-up2}em;
-  margin-bottom: #{$vertical-measure / $modular-scale-up2}em;
 }
 
 h4 {
   font-size: #{$modular-scale-up1}em;
-  margin-bottom: #{$vertical-measure / $modular-scale-up1}em;
 }
 
 h5 {
   font-size: #{$modular-scale-base}em;
-  margin-bottom: #{$vertical-measure}em;
 }
 
 h6 {
   font-size: #{$modular-scale-base}em;
-  margin-bottom: #{$vertical-measure}em;
   color: lighten($heading-font-color, 25%);
   letter-spacing: 0.1em;
   text-transform: uppercase;

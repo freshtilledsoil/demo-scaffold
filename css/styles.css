@@ -124,6 +124,9 @@ p {
   line-height: 1.438;
   margin: 0 0 1.438em 0; }
 
+p.lead {
+  font-size: 1.438em; }
+
 strong {
   font-weight: bold; }
 
@@ -143,28 +146,22 @@ h1, h2, h3, h4, h5, h6 {
   text-rendering: optimizelegibility; }
 
 h1 {
-  font-size: 2.625em;
-  margin-bottom: 0.548em; }
+  font-size: 2.625em; }
 
 h2 {
-  font-size: 2.313em;
-  margin-bottom: 0.622em; }
+  font-size: 2.313em; }
 
 h3 {
-  font-size: 1.625em;
-  margin-bottom: 0.885em; }
+  font-size: 1.625em; }
 
 h4 {
-  font-size: 1.438em;
-  margin-bottom: 1em; }
+  font-size: 1.438em; }
 
 h5 {
-  font-size: 1em;
-  margin-bottom: 1.438em; }
+  font-size: 1em; }
 
 h6 {
   font-size: 1em;
-  margin-bottom: 1.438em;
   color: #737373;
   letter-spacing: 0.1em;
   text-transform: uppercase; }
@@ -229,7 +226,10 @@ body {
   width: 100%;
   max-width: 1180px;
   margin: 0 auto;
-  padding: 0; }
+  padding: 0 1em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
 
 .main-header {
   background: #fefefe url("../img/static-bg.png") top center repeat;
@@ -261,17 +261,12 @@ body {
   transition-delay: 0;
   width: 100%;
   z-index: 9999; }
-  .main-header .container {
-    padding: 0 1em;
-    width: auto; }
   .main-header .logo {
     color: #232323;
     float: left;
     font-size: 1.375em;
     font-weight: bold;
     text-decoration: none; }
-    .main-header .logo:hover {
-      text-decoration: none; }
 
 .main-nav {
   text-align: right;
@@ -324,10 +319,13 @@ body {
     -ms-transition-delay: 0;
     -o-transition-delay: 0;
     transition-delay: 0; }
-    .main-nav a:hover {
-      border-color: #e5e5e5;
-      background-color: white;
-      text-decoration: none; }
+  .main-nav a:hover {
+    border-color: #e5e5e5;
+    background-color: white;
+    text-decoration: none; }
+
+div[role="main"] {
+  padding-top: 6em; }
 
 /* Helper classes =============================================================================== */
 .hide {
