@@ -1,0 +1,119 @@
+/* Type Styles ================================================================================== */
+
+html { -webkit-font-smoothing: antialiased; }
+
+@mixin body-font-styles { // keep body specific type styles in the type stylesheet
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-size: 100%;
+  line-height: $base-line-height;
+  font-style: normal;
+  font-weight: normal;
+}
+
+p {
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  margin: 0 0 #{$vertical-measure}em 0;
+}
+
+strong { font-weight: bold; }
+em { font-style: italic; }
+cite { font-style: normal; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  font-family: $heading-font-family;
+  font-weight: bold;
+  line-height: 1;
+  color: $heading-font-color;
+  text-rendering: optimizelegibility; // Fix the character spacing for headings
+}
+
+h1 {
+  font-size: #{$modular-scale-up4}em;
+  margin-bottom: #{$vertical-measure / $modular-scale-up4}em;
+}
+
+h2 {
+  font-size: #{$modular-scale-up3}em;
+  margin-bottom: #{$vertical-measure / $modular-scale-up3}em;
+}
+
+h3 {
+  font-size: #{$modular-scale-up2}em;
+  margin-bottom: #{$vertical-measure / $modular-scale-up2}em;
+}
+
+h4 {
+  font-size: #{$modular-scale-up1}em;
+  margin-bottom: #{$vertical-measure / $modular-scale-up1}em;
+}
+
+h5 {
+  font-size: #{$modular-scale-base}em;
+  margin-bottom: #{$vertical-measure}em;
+}
+
+h6 {
+  font-size: #{$modular-scale-base}em;
+  margin-bottom: #{$vertical-measure}em;
+  color: lighten($heading-font-color, 25%);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+ul, ol {
+  padding: 0;
+  margin: 0 0 #{$vertical-measure}em 1em;
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin-bottom: 0;
+}
+
+li {
+  line-height: $base-line-height;
+}
+
+hr {
+  margin: 0 0 #{$vertical-measure}em 0;
+  border: 0;
+  border-top: 1px solid $darkest;
+  border-bottom: 1px solid $lightest;
+}
+
+abbr[title] {
+  cursor: help;
+  border-bottom: 1px dotted $gray20;
+}
+
+blockquote {
+  color: lighten($base-font-color, 25%);
+  padding-left: 1em;
+  margin: 0 0 #{$vertical-measure}em 0;
+  border-left: 0.25em solid $primary;
+
+  p {
+    margin-bottom: 0;
+    font-style: italic;
+  }
+
+  small {
+    font-size: #{$modular-scale-down1};
+    &:before {
+      content: '\2014 \00A0';
+    }
+  }
+}
+
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+  content: "";
+}
